@@ -1,0 +1,408 @@
+
+[
+        {
+            "id": 0,
+            "category": "Specials",
+            "title": "Coffee and Turnover Combo",
+            "image": "coffeedessert",
+            "size": ["12oz.", "16oz.", "20oz.", "24oz."],
+            "price": [4.25, 4.75, 5.25, 6.00]
+        },
+        {
+            "id": 1,
+            "category": "Specials",
+            "title": "Mochas",
+            "image": "mochas",
+            "size": ["12oz.", "16oz.", "20oz.", "24oz."],
+            "price": [3.25, 3.75, 4.25, 5.00]
+        },
+        {
+            "id": 2,
+            "category": "Specials",
+            "title": "Cookies",
+            "image": "cookies",
+            "size": ["Medium", "Large"],
+            "price": [ 4.00, 5.00]
+        },
+        {
+            "id": 3,
+            "category": "Specials",
+            "title": "Regular Coffee",
+            "image": "coffee2",
+            "size": ["12oz.", "16oz.", "20oz.", "24oz."],
+            "price": [2.00, 2.25, 2.50, 2.75]
+        },
+        {
+            "id": 0,
+            "category": "Coffees",
+            "title": "Americano",
+            "image": "coffee",
+            "size": ["12oz.", "16oz.", "20oz.", "24oz."],
+            "price": [2.00, 2.25, 2.50, 2.75]
+        },
+        {
+            "id": 1,
+            "category": "Coffees",
+            "title": "Latte",
+            "image": "coffee",
+            "size": ["12oz.", "16oz.", "20oz.", "24oz."],
+            "price": [3.25, 3.75, 4.25, 5.00]
+        },
+        {
+            "id": 2,
+            "category": "Coffees",
+            "title": "Breve",
+            "image": "coffee",
+            "size": ["12oz.", "16oz.", "20oz.", "24oz."],
+            "price": [3.75, 4.25, 4.75, 5.50]
+        },
+        {
+            "id": 3,
+            "category": "Coffees",
+            "title": "Mocha",
+            "image": "coffee",
+            "size": ["12oz.", "16oz.", "20oz.", "24oz."],
+            "price": [3.50, 4.00, 4.50, 5.25],
+            "detail": "White, Dark, or Milk Chocolate"
+        },
+        {
+            "id": 4,
+            "category": "Coffees",
+            "title": "Cappuccino",
+            "image": "coffee",
+            "size": ["12oz.", "16oz.", "20oz.", "24oz."],
+            "price": [3.00, 3.50, 4.00, 4.50]
+        },
+        {
+            "id": 5,
+            "category": "Coffees",
+            "title": "House Coffee",
+            "image": "coffee",
+            "size": ["12oz.", "16oz.", "20oz.", "24oz."],
+            "price": [1.25, 1.50, 1.75, 2.00]
+        },
+        {
+            "id": 6,
+            "category": "Coffees",
+            "title": "Shot in the Dark",
+            "image": "coffee",
+            "size": ["12oz.", "16oz.", "20oz.", "24oz."],
+            "price": [2.00, 2.50, 3.00, 3.50]
+        },
+        {
+            "id": 7,
+            "category": "Coffees",
+            "title": "Cold Brew",
+            "image": "coffee",
+            "size": ["16oz.", "20oz.", "24oz."],
+            "price": [3.50, 4.50, 5.50]
+        },
+        {
+            "id": 0,
+            "category": "Teas and Lemonades",
+            "title": "London Fog",
+            "image": "coffee",
+            "size": ["12oz.", "16oz.", "20oz.", "24oz."],
+            "price": [3.50, 4.00, 4.50, 5.25]
+        },
+        {
+            "id": 1,
+            "category": "Teas and Lemonades",
+            "title": "Chai Tea",
+            "image": "coffee",
+            "size": ["12oz.", "16oz.", "20oz.", "24oz."],
+            "price": [3.75, 4.25, 4.75, 5.50],
+            "detail": "Tiger, Orca, Elephant, Flamingo(SF) or Matcha"
+        },
+        {
+            "id": 2,
+            "category": "Teas and Lemonades",
+            "title": "Tea Bag",
+            "image": "coffee",
+            "size": ["12oz.", "16oz.", "20oz.", "24oz."],
+            "price": [1.75, 2.00, 2.25, 2.50],
+            "detail": "Lipton, Earl Grey, Chamomile, PepperMint, Lemon Ginger"
+        },
+        {
+            "id": 3,
+            "category": "Teas and Lemonades",
+            "title": "House Brewed Lipton Tea",
+            "image": "coffee",
+            "size": ["16oz.", "20oz.", "24oz."],
+            "price": [3.00, 3.50, 4.00]
+        },
+        {
+            "id": 4,
+            "category": "Teas and Lemonades",
+            "title": "House Made Lemonade",
+            "image": "coffee",
+            "size": ["16oz.", "20oz.", "24oz."],
+            "price": [3.00, 3.50, 4.00]
+        },
+        {
+            "id": 5,
+            "category": "Teas and Lemonades",
+            "title": "Blended Lemonade",
+            "image": "coffee",
+            "size": ["16oz.", "20oz.", "24oz."],
+            "price": [5.50, 6.00, 6.50]
+        },
+        {
+            "id": 0,
+            "category": "Energy Drinks",
+            "title": "Spritzer",
+            "image": "coffee",
+            "size": ["16oz.", "20oz.", "24oz."],
+            "price": [5.50, 6.00, 6.50],
+            "detail": "Add Rainbow Popping Pearls for $1"
+        },
+        {
+            "id": 1,
+            "category": "Energy Drinks",
+            "title": "Slushee",
+            "image": "coffee",
+            "size": ["16oz.", "20oz.", "24oz."],
+            "price": [5.75, 6.25, 6.75]
+        },
+        {
+            "id": 1,
+            "category": "Energy Drinks",
+            "title": "Smoothie",
+            "image": "coffee",
+            "size": ["16oz.", "20oz.", "24oz."],
+            "price": [6.00, 6.50, 7.00]
+        },
+        {
+            "id": 0,
+            "category": "Blended Drinks",
+            "title": "Frappuccino",
+            "image": "coffee",
+            "size": ["16oz.", "20oz.", "24oz."],
+            "price": [5.50, 6.00, 6.50],
+            "detail": "Latte, Mocha, White Mocha, Coffee Toffee, Toasted Coconut, Pralines n' Cream"
+        },
+        {
+            "id": 1,
+            "category": "Blended Drinks",
+            "title": "Smoothie",
+            "image": "coffee",
+            "size": ["16oz.", "20oz.", "24oz."],
+            "price": [5.50, 6.00, 6.50]
+        },
+        {
+            "id": 2,
+            "category": "Blended Drinks",
+            "title": "Real Fruit Smoothie",
+            "image": "coffee",
+            "size": ["20oz."],
+            "price": [8.00]
+        },
+        {
+            "id": 0,
+            "category": "Natural Lattes",
+            "title": "Golden Turmeric Latte",
+            "image": "coffee",
+            "size": ["16oz.", "20oz.", "24oz."],
+            "price": [5.50, 6.00, 6.50]
+        },
+        {
+            "id": 1,
+            "category": "Natural Lattes",
+            "title": "Matcha Latte",
+            "image": "coffee",
+            "size": ["16oz.", "20oz.", "24oz."],
+            "price": [5.75, 6.25, 6.75]
+        },
+        {
+            "id": 2,
+            "category": "Natural Lattes",
+            "title": "Charcoal Latte",
+            "image": "coffee",
+            "size": ["16oz.", "20oz.", "24oz."],
+            "price": [5.75, 6.25, 6.75]
+        },
+        {
+            "id": 3,
+            "category": "Natural Lattes",
+            "title": "Cardamon Latte",
+            "image": "coffee",
+            "size": ["16oz.", "20oz.", "24oz."],
+            "price": [5.75, 6.25, 6.75]
+        },
+        {
+            "id": 4,
+            "category": "Natural Lattes",
+            "title": "Bee Sting Latte",
+            "image": "coffee",
+            "size": ["16oz.", "20oz.", "24oz."],
+            "price": [5.75, 6.25, 6.75]
+        },
+        {
+            "id": 0,
+            "category": "Specialty Drinks",
+            "title": "The Local",
+            "image": "coffee",
+            "size": ["16oz.", "20oz.", "24oz."],
+            "price": [5.50, 6.00, 6.50]
+        },
+        {
+            "id": 1,
+            "category": "Specialty Drinks",
+            "title": "Tye Dye Drink",
+            "image": "coffee",
+            "size": ["16oz.", "20oz.", "24oz."],
+            "price": [5.75, 6.25, 6.75]
+        },
+        {
+            "id": 1,
+            "category": "Specialty Drinks",
+            "title": "Seahawk",
+            "image": "coffee",
+            "size": ["16oz.", "20oz.", "24oz."],
+            "price": [5.75, 6.25, 6.75]
+        },
+        {
+            "id": 1,
+            "category": "Specialty Drinks",
+            "title": "Red Bull",
+            "image": "coffee",
+            "size": ["16oz.", "20oz.", "24oz."],
+            "price": [5.75, 6.25, 6.75]
+        },
+        {
+            "id": 1,
+            "category": "Specialty Drinks",
+            "title": "Lotus",
+            "image": "coffee",
+            "size": ["16oz.", "20oz.", "24oz."],
+            "price": [5.75, 6.25, 6.75]
+        },
+        {
+            "id": 0,
+            "category": "Foods",
+            "title": "Spritzer",
+            "image": "coffee",
+            "size": ["16oz.", "20oz.", "24oz."],
+            "price": [5.50, 6.00, 6.50]
+        },
+        {
+            "id": 1,
+            "category": "Foods",
+            "title": "Slushee",
+            "image": "coffee",
+            "size": ["16oz.", "20oz.", "24oz."],
+            "price": [5.75, 6.25, 6.75]
+        },
+        {
+            "id": 0,
+            "category": "Handmade Liege Waffles",
+            "title": "Spritzer",
+            "image": "coffee",
+            "size": ["16oz.", "20oz.", "24oz."],
+            "price": [5.50, 6.00, 6.50]
+        },
+        {
+            "id": 1,
+            "category": "Handmade Liege Waffles",
+            "title": "Slushee",
+            "image": "coffee",
+            "size": ["16oz.", "20oz.", "24oz."],
+            "price": [5.75, 6.25, 6.75]
+        },
+        {
+            "id": 0,
+            "category": "Biscuits And Gravy",
+            "title": "Spritzer",
+            "image": "coffee",
+            "size": ["16oz.", "20oz.", "24oz."],
+            "price": [5.50, 6.00, 6.50]
+        },
+        {
+            "id": 1,
+            "category": "Biscuits And Gravy",
+            "title": "Slushee",
+            "image": "coffee",
+            "size": ["16oz.", "20oz.", "24oz."],
+            "price": [5.75, 6.25, 6.75]
+        },
+        {
+            "id": 0,
+            "category": "Toasts",
+            "title": "Spritzer",
+            "image": "coffee",
+            "size": ["16oz.", "20oz.", "24oz."],
+            "price": [5.50, 6.00, 6.50]
+        },
+        {
+            "id": 1,
+            "category": "Toasts",
+            "title": "Slushee",
+            "image": "coffee",
+            "size": ["16oz.", "20oz.", "24oz."],
+            "price": [5.75, 6.25, 6.75]
+        },
+        {
+            "id": 0,
+            "category": "Bagels",
+            "title": "Spritzer",
+            "image": "coffee",
+            "size": ["16oz.", "20oz.", "24oz."],
+            "price": [5.50, 6.00, 6.50]
+        },
+        {
+            "id": 1,
+            "category": "Bagels",
+            "title": "Slushee",
+            "image": "coffee",
+            "size": ["16oz.", "20oz.", "24oz."],
+            "price": [5.75, 6.25, 6.75]
+        },
+        {
+            "id": 0,
+            "category": "Quesadillas",
+            "title": "Spritzer",
+            "image": "coffee",
+            "size": ["16oz.", "20oz.", "24oz."],
+            "price": [5.50, 6.00, 6.50]
+        },
+        {
+            "id": 1,
+            "category": "Quesadillas",
+            "title": "Slushee",
+            "image": "coffee",
+            "size": ["16oz.", "20oz.", "24oz."],
+            "price": [5.75, 6.25, 6.75]
+        },
+        {
+            "id": 0,
+            "category": "Kid's Corner",
+            "title": "Hot Chocolate",
+            "image": "coffee",
+            "size": ["8oz.", "12oz."],
+            "price": [2.00, 3.00]
+        },
+        {
+            "id": 1,
+            "category": "Kid's Corner",
+            "title": "Steamer",
+            "image": "coffee",
+            "size": ["8oz.", "12oz."],
+            "price": [2.00, 3.00]
+        },
+        {
+            "id": 2,
+            "category": "Kid's Corner",
+            "title": "Italian Soda",
+            "image": "coffee",
+            "size": ["16oz."],
+            "price": [3.00]
+        },
+        {
+            "id": 3,
+            "category": "Kid's Corner",
+            "title": "Kid's Cream Frappe",
+            "image": "coffee",
+            "size": ["16oz."],
+            "price": [4.00]
+        }
+]

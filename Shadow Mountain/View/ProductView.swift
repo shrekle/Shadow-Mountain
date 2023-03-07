@@ -11,7 +11,13 @@ struct ProductView: View {
     
     @EnvironmentObject var model: ViewModel
     
-    var category: String
+    var category: CategoryModel
+    
+//    func blah(category: CategoryModel)-> ProductModel {
+//
+//
+//
+//    }
     
     var body: some View {
         
@@ -36,9 +42,9 @@ struct ProductView: View {
     }
 }
 
-struct ProductView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProductView(category: Constants.teasAndLemonades)
-            .environmentObject(ViewModel())
-    }
-}
+//struct ProductView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ProductView(category: Constants.teasAndLemonades)
+//            .environmentObject(ViewModel())
+//    }
+//}

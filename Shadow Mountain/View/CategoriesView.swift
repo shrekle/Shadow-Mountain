@@ -20,27 +20,23 @@ struct CategoriesView: View {
         
         LazyVGrid(columns: columns, spacing: 15) {
             
-//            Button("ADD CRAP!") {
-//                model.getCrap()
-//            }
-            
-            ForEach(model.productsArray) { category in
+            ForEach(model.categoriesArray) { category in
                 
-                NavigationLink(value: category.title) {
-                    HomeButton(category: category.category)
+                NavigationLink(value: category) {
+                    HomeButton(category: category)
                 }
             }
         }
-        .navigationDestination(for: String.self) { category in
+        .navigationDestination(for: CategoryModel.self) { category in
             ProductView(category: category)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        Image("dumpi")
+                        Image("logoBlack")
                             .resizable()
-                            .cornerRadius(10)
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: 85, height: 50)
-                            .padding(.trailing)
+                            .frame(width: 95, height: 60)
+                            .clipShape(Circle())
+                            .padding(.top)
                     }
                 }
         }

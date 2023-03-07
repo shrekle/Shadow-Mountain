@@ -9,16 +9,16 @@ import SwiftUI
 
 struct CategoryImage: View {
     
-    var category: String
+    var category: CategoryModel
     
     var body: some View {
         ZStack {
-            Image("stacysky")
+            Image(uiImage: category.image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .clipped()
             
-            Text(category)
+            Text(category.title)
                 .font(.system(size: 60))
                 .bold()
                 .foregroundColor(.white)
@@ -34,8 +34,8 @@ struct CategoryImage: View {
     }
 }
 
-struct CategoryImage_Previews: PreviewProvider {
-    static var previews: some View {
-        CategoryImage(category: "Coffees")
-    }
-}
+//struct CategoryImage_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CategoryImage(category: "Coffees")
+//    }
+//}

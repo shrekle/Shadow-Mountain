@@ -16,7 +16,7 @@ struct SpecialsView: View {
         
         TabView(selection: $tabIndex) {
             
-            ForEach(0..<model.productsArray.count, id: \.self) { index in
+            ForEach(0..<model.specialsArray.count, id: \.self) { index in
                 ZStack {
                     VStack(spacing: 5) {
                         Text(Constants.specials)
@@ -28,7 +28,7 @@ struct SpecialsView: View {
                             .resizable()
                             .clipped()
                         
-                        Text(model.productsArray[index].title)
+                        Text(model.specialsArray[index].title)
                             .foregroundColor(.black)
                             .bold()
                             .padding(.bottom, 5)

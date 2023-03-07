@@ -14,23 +14,37 @@ class ViewModel: NSObject, ObservableObject {
     var fireModel = FireViewModel()
     private var contex = CoreData.shared.contex
     
+    @Published var categoriesArray = [CategoryModel]()
     @Published var productsArray = [ProductModel]()
+    @Published var specialsArray = [ProductModel]()
     
-    let ProductsfetchResultsController: NSFetchedResultsController<ProductEntity>
+    let ProductsFetchResultsController: NSFetchedResultsController<ProductEntity>
+    let specialsFetchResultsController: NSFetchedResultsController<ProductEntity>
+    let categoryFetchResultsController: NSFetchedResultsController<CategoryEntity>
     
     override init() {
-        ProductsfetchResultsController = NSFetchedResultsController(fetchRequest: ProductEntity.all, managedObjectContext: contex, sectionNameKeyPath: nil, cacheName: nil)
+        categoryFetchResultsController = NSFetchedResultsController(fetchRequest: CategoryEntity.all, managedObjectContext: contex, sectionNameKeyPath: nil, cacheName: nil)
+        ProductsFetchResultsController = NSFetchedResultsController(fetchRequest: ProductEntity.all, managedObjectContext: contex, sectionNameKeyPath: nil, cacheName: nil)
+        specialsFetchResultsController = NSFetchedResultsController(fetchRequest: ProductEntity.specials, managedObjectContext: contex, sectionNameKeyPath: nil, cacheName: nil)
         
         super.init()
         
-        ProductsfetchResultsController.delegate = self
+        categoryFetchResultsController.delegate = self
+        ProductsFetchResultsController.delegate = self
+        specialsFetchResultsController.delegate = self
         
         do {
-            try ProductsfetchResultsController.performFetch()
-            guard let productsObjects = ProductsfetchResultsController.fetchedObjects else { print("🤖 fetchObjects failed"); return }
+            try categoryFetchResultsController.performFetch()
+            try ProductsFetchResultsController.performFetch()
+            try specialsFetchResultsController.performFetch()
             
+            guard let categoryObjects = categoryFetchResultsController.fetchedObjects else { print("🫵🏿 fetchObjects failed"); return }
+            guard let productsObjects = ProductsFetchResultsController.fetchedObjects else { print("🤖 fetchObjects failed"); return }
+            guard let specialsObjects = specialsFetchResultsController.fetchedObjects else { print("🫥 fetched specialsObjects failed"); return }
+            
+            categoriesArray = categoryObjects.map(CategoryModel.init)
             productsArray = productsObjects.map(ProductModel.init)
-            
+            specialsArray = specialsObjects.map(ProductModel.init)
         }
         catch let error { print("🤑 \(error)") }
     }
@@ -39,14 +53,27 @@ class ViewModel: NSObject, ObservableObject {
 extension ViewModel: NSFetchedResultsControllerDelegate {
     
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        guard let results = controller.fetchedObjects as? [ProductEntity] else { print("👄 controllerDidChange failed"); return }
+      
+        if let results = controller.fetchedObjects as? [CategoryEntity] {
+            categoriesArray = results.map(CategoryModel.init)
+        }
         
-        productsArray = results.map(ProductModel.init)
+        if let results = controller.fetchedObjects as? [ProductEntity]  {
+            switch controller.fetchRequest {
+            case ProductEntity.all:
+                productsArray = results.map(ProductModel.init)
+            case ProductEntity.specials:
+                specialsArray = results.map(ProductModel.init)
+            default:
+                productsArray = results.map(ProductModel.init)
+            }
+        }
     }
 }
 
 extension ViewModel {
     func getCrap() {
-        fireModel.loadData()
+        fireModel.loadCategories()
+        fireModel.loadMenu()
     }
 }

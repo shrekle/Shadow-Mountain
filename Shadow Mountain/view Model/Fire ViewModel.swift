@@ -18,17 +18,43 @@ class FireViewModel {
     let contex = CoreData.shared.contex
     
     func timeStamp() {
-        loadData()
+        loadMenu()
     }
     
-    func loadData() {
+    func loadCategories() {
+        db.collection("categories").getDocuments { qsnap, error in
+            guard error == nil, let qsnap else { print("💩 categories 1sr call guard failed"); return }
+            
+            qsnap.documents.forEach { doc in
+                
+                let fileRef = self.storageRef.child(doc["image"] as! String)
+                
+                fileRef.getData(maxSize: 1*1024*1024) { data, error in
+                    guard error == nil, let data else { print("👄 fileRef guard failed...\(String(describing: error))"); return }
+                    
+                    guard let image = UIImage(data: data) else {print("🐤 uiimage failed \(String(describing: error))"); return }
+                    
+                    let category = CategoryEntity(context: self.contex)
+                    category.title = doc["title"] as? String
+                    category.image = image
+                    
+                    do {
+                        try category.save()
+                    }
+                    catch let error { print("🐝 \(error)")}
+                }
+            }
+        }
+    }
+    
+    func loadMenu() {
         db.collection("menu").getDocuments { qsnap, error in
 
             guard error == nil, let qsnap else {  print("😻 load data 1st guard"); return }
-
+            
             qsnap.documents.forEach { doc in
                 guard let keys = doc["keys"] as? [String] else { print("😺 keys failed"); return }
-               
+      
 //                guard let image = doc["image"] as? UIImage else { print("👽 image failed"); return }
                 
                 keys.forEach { key in

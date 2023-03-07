@@ -9,13 +9,13 @@ import SwiftUI
 
 struct HomeButton: View {
     
-    var category: String
+    var category: CategoryModel
     
     var body: some View {
        
         ZStack {
             
-            Text(category)
+            Text(category.title)
                 .foregroundColor(.black)
                 .bold()
                 .frame(width: 170, height: 50)
@@ -25,9 +25,9 @@ struct HomeButton: View {
         .mask(RoundedRectangle(cornerRadius: 10, style: .continuous))
     }
 }
-
-struct HomeButton_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeButton(category: "GayJay")
-    }
-}
+//
+//struct HomeButton_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HomeButton()
+//    }
+//}

@@ -20,10 +20,14 @@ struct CategoriesView: View {
         
         LazyVGrid(columns: columns, spacing: 15) {
             
-            ForEach(Array(model.categories), id:  \.self) { category in
+//            Button("ADD CRAP!") {
+//                model.getCrap()
+//            }
+            
+            ForEach(model.productsArray) { category in
                 
-                NavigationLink(value: category) {
-                    HomeButton(category: category)
+                NavigationLink(value: category.title) {
+                    HomeButton(category: category.category)
                 }
             }
         }
@@ -31,7 +35,7 @@ struct CategoriesView: View {
             ProductView(category: category)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        Image("logo")
+                        Image("dumpi")
                             .resizable()
                             .cornerRadius(10)
                             .aspectRatio(contentMode: .fit)

@@ -6,30 +6,47 @@
 //
 
 import Foundation
+import CoreData
 
-class ViewModel: ObservableObject {
-
-    @Published var menu = [Menu]()
-    @Published var categories = Set<String>()
-    @Published var currentCategory = [Menu]()
-    @Published var specials = [Menu]()
-    @Published var coffees = [Menu]()
-    @Published var teasAndLemonades = [Menu]()
-    @Published var EnergyDrinks = [Menu]()
-    @Published var blendedDrinks = [Menu]()
-    @Published var naturalLattes = [Menu]()
-    @Published var specialtyDrinks = [Menu]()
-    @Published var handmadeLiegeWaffles = [Menu]()
-    @Published var biscuitsAndGravy = [Menu]()
-    @Published var toasts = [Menu]()
-    @Published var bagels = [Menu]()
-    @Published var quesadillas = [Menu]()
-    @Published var kidsCorners = [Menu]()
-
-    init() {
-       
-    }
+@MainActor
+class ViewModel: NSObject, ObservableObject {
     
-    //make this by alphabetical order
-  
+    var fireModel = FireViewModel()
+    private var contex = CoreData.shared.contex
+    
+    @Published var productsArray = [ProductModel]()
+    
+    let ProductsfetchResultsController: NSFetchedResultsController<ProductEntity>
+    
+    override init() {
+        ProductsfetchResultsController = NSFetchedResultsController(fetchRequest: ProductEntity.all, managedObjectContext: contex, sectionNameKeyPath: nil, cacheName: nil)
+        
+        super.init()
+        
+        ProductsfetchResultsController.delegate = self
+        
+        do {
+            try ProductsfetchResultsController.performFetch()
+            guard let productsObjects = ProductsfetchResultsController.fetchedObjects else { print("🤖 fetchObjects failed"); return }
+            
+            productsArray = productsObjects.map(ProductModel.init)
+            
+        }
+        catch let error { print("🤑 \(error)") }
+    }
+}
+
+extension ViewModel: NSFetchedResultsControllerDelegate {
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        guard let results = controller.fetchedObjects as? [ProductEntity] else { print("👄 controllerDidChange failed"); return }
+        
+        productsArray = results.map(ProductModel.init)
+    }
+}
+
+extension ViewModel {
+    func getCrap() {
+        fireModel.loadData()
+    }
 }

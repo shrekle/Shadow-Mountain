@@ -22,10 +22,10 @@ struct ProductView: View {
                     
                     CategoryImage(category: category)
                     
-                    ForEach(model.currentCategory) { product in
-                        ProductCard(product: product)
-                            .padding(.horizontal)
-                    }
+//                    ForEach(model.currentCategory) { product in
+//                        ProductCard(product: product)
+//                            .padding(.horizontal)
+//                    }
                 }
                 .onAppear {
                    

@@ -13,7 +13,7 @@ struct CategoryImage: View {
     
     var body: some View {
         ZStack {
-            Image("coffeebeanbg")
+            Image("stacysky")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .clipped()

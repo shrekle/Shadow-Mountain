@@ -12,39 +12,29 @@ struct HomeView: View {
     @EnvironmentObject var model: ViewModel
     
     var body: some View {
-        TabView {
-            NavigationStack {
-                
-                VStack(spacing: 0) {
-                    
-                    HeaderView()
-                    
-                    SpecialsView()
-                        .aspectRatio(CGSize(width: 160, height: 145), contentMode: .fit)
-                        .padding(.horizontal, 20)
-                    
-                    ScrollView {
-                        CategoriesView()
-                            .padding(.horizontal)
-                            .padding(.bottom, 40)
-                            .padding(.top, 10)
-                    }
-                }
-                .background(.purple)
-            }
-            .tabItem({
-                Image(systemName: "cup.and.saucer")
-                Text("Drinks")
-            })
-            .tint(.black)
+        
+        NavigationStack {
             
-            AnnouncementsView()
-                .tabItem {
-                    Image(systemName: "megaphone")
-                    Text("Announcemetns")
+            VStack(spacing: 0) {
+                
+                Button("PRESS ME") {
+                    model.getCrap()
                 }
+   
+                HeaderView()
+
+                SpecialsView()
+                    .aspectRatio(CGSize(width: 160, height: 145), contentMode: .fit)
+                    .padding(.horizontal, 20)
+
+                ScrollView {
+                    CategoriesView()
+                        .padding(.horizontal)
+                        .padding(.bottom, 40)
+                        .padding(.top, 10)
+                }
+            }
         }
-        .tint(.black.opacity(0.7))
     }
 }
 

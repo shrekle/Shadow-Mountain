@@ -13,7 +13,7 @@ struct HeaderView: View {
         
         HStack(spacing: 0) {
             
-            Image("logo")
+            Image("dumpi")
                 .resizable()
                 .cornerRadius(10)
                 .aspectRatio(contentMode: .fit)

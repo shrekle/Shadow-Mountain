@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProductCard: View {
     
-    var product: Menu
+    var product: ProductModel
     
     var body: some View {
         
@@ -26,10 +26,10 @@ struct ProductCard: View {
                     
                     HStack(spacing: 30) {
                         
-                        ForEach(0..<product.size.count, id: \.self) { i in
+                        ForEach(0..<(product.size!).count, id: \.self) { i in
                             
                             VStack(alignment: .leading) {
-                                Text(product.size[i])
+                                Text(product.size![i])
                                 Text("$\(String(format: "%.2f", product.price[i]))")
                             }
                         }
@@ -46,6 +46,6 @@ struct ProductCard: View {
 
 struct ProductCard_Previews: PreviewProvider {
     static var previews: some View {
-        ProductCard(product: ViewModel().menu[1])
+        ProductCard(product: ViewModel().productsArray[0])
     }
 }

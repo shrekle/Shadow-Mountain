@@ -6,12 +6,22 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct Shadow_MountainApp: App {
+    
+    let context = CoreData.shared.contex
+    
+    init() {
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
             HomeView()
-                .environmentObject(ViewModel())        }
+                .environmentObject(ViewModel())
+                .environment(\.managedObjectContext, context)
+        }
     }
 }

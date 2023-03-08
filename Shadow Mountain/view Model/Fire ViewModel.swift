@@ -54,25 +54,32 @@ class FireViewModel {
             
             qsnap.documents.forEach { doc in
                 guard let keys = doc["keys"] as? [String] else { print("😺 keys failed"); return }
-      
-//                guard let image = doc["image"] as? UIImage else { print("👽 image failed"); return }
-                
+                      
                 keys.forEach { key in
                     self.db.collection("menu").document(doc.documentID).collection(key).document("details").getDocument { snap, error in
                         guard error == nil, let snap else { print("🤡 details for products failed"); return }
                       
-                        let product = ProductEntity(context: self.contex)
-                        product.title = snap["title"] as? String
-                        product.size = snap["size"] as? [String]
-                        product.price = snap["price"] as? [String]
-                        product.type = snap["type"] as? [String]
-                        product.detail = snap["detail"] as? String
-                        product.category = snap["category"] as? String
-                        
-                        do {
-                            try product.save()
+                        let fileRef = self.storageRef.child(snap["image"] as! String)
+
+                        fileRef.getData(maxSize: 1*1024*1024) { data, error in
+                            guard error == nil, let data else { print("🥳 menu image guard failed\(String(describing: error))"); return }
+
+                            guard let image = UIImage(data: data) else {print("🥵 image is being homo \(String(describing: error))"); return }
+                            
+                            let product = ProductEntity(context: self.contex)
+                            product.title = snap["title"] as? String
+                            product.size = snap["size"] as? [String]
+                            product.price = snap["price"] as? [String]
+                            product.type = snap["type"] as? [String]
+                            product.detail = snap["detail"] as? String
+                            product.category = snap["category"] as? String
+                            product.image = image
+                            
+                            do {
+                                try product.save()
+                            }
+                            catch let error { print("😶‍🌫️ \(error)") }
                         }
-                        catch let error { print("😶‍🌫️ \(error)") }
                     }
                 }
             }

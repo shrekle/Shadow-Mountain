@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CA1DF13629B6B62000D3ABC0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA1DF13529B6B62000D3ABC0 /* GoogleService-Info.plist */; };
-		CA1DF13D29B7A2E900D3ABC0 /* CategoryEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DF13B29B7A2E900D3ABC0 /* CategoryEntity+CoreDataClass.swift */; };
-		CA1DF13E29B7A2E900D3ABC0 /* CategoryEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DF13C29B7A2E900D3ABC0 /* CategoryEntity+CoreDataProperties.swift */; };
 		CA1DF14129B7A37900D3ABC0 /* UIImageTranny.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DF14029B7A37900D3ABC0 /* UIImageTranny.swift */; };
 		CA1DF14429B7AB7300D3ABC0 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DF14329B7AB7300D3ABC0 /* CategoryModel.swift */; };
 		CA1DF14629B7AD2B00D3ABC0 /* CategoryEntity+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DF14529B7AD2B00D3ABC0 /* CategoryEntity+Extension.swift */; };
+		CA1DF16229B8FDAB00D3ABC0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA1DF16129B8FDAB00D3ABC0 /* GoogleService-Info.plist */; };
+		CA3AFA2229B93A6500595CF3 /* CategoryEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3AFA1E29B93A6500595CF3 /* CategoryEntity+CoreDataClass.swift */; };
+		CA3AFA2329B93A6500595CF3 /* CategoryEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3AFA1F29B93A6500595CF3 /* CategoryEntity+CoreDataProperties.swift */; };
+		CA3AFA2429B93A6500595CF3 /* ProductEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3AFA2029B93A6500595CF3 /* ProductEntity+CoreDataClass.swift */; };
+		CA3AFA2529B93A6500595CF3 /* ProductEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3AFA2129B93A6500595CF3 /* ProductEntity+CoreDataProperties.swift */; };
 		CA43586429B1A9B0004E3459 /* Shadow_MountainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA43586329B1A9B0004E3459 /* Shadow_MountainApp.swift */; };
 		CA43586829B1A9B2004E3459 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA43586729B1A9B2004E3459 /* Assets.xcassets */; };
 		CA43586B29B1A9B2004E3459 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA43586A29B1A9B2004E3459 /* Preview Assets.xcassets */; };
@@ -37,12 +39,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CA1DF13529B6B62000D3ABC0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		CA1DF13B29B7A2E900D3ABC0 /* CategoryEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		CA1DF13C29B7A2E900D3ABC0 /* CategoryEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CA1DF14029B7A37900D3ABC0 /* UIImageTranny.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageTranny.swift; sourceTree = "<group>"; };
 		CA1DF14329B7AB7300D3ABC0 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		CA1DF14529B7AD2B00D3ABC0 /* CategoryEntity+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryEntity+Extension.swift"; sourceTree = "<group>"; };
+		CA1DF16129B8FDAB00D3ABC0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CA3AFA1E29B93A6500595CF3 /* CategoryEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CA3AFA1F29B93A6500595CF3 /* CategoryEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CA3AFA2029B93A6500595CF3 /* ProductEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CA3AFA2129B93A6500595CF3 /* ProductEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CA43586029B1A9B0004E3459 /* Shadow Mountain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shadow Mountain.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA43586329B1A9B0004E3459 /* Shadow_MountainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadow_MountainApp.swift; sourceTree = "<group>"; };
 		CA43586729B1A9B2004E3459 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,8 +93,10 @@
 		CA1DF14229B7A44500D3ABC0 /* CoreData SubClasses */ = {
 			isa = PBXGroup;
 			children = (
-				CA1DF13B29B7A2E900D3ABC0 /* CategoryEntity+CoreDataClass.swift */,
-				CA1DF13C29B7A2E900D3ABC0 /* CategoryEntity+CoreDataProperties.swift */,
+				CA3AFA1E29B93A6500595CF3 /* CategoryEntity+CoreDataClass.swift */,
+				CA3AFA1F29B93A6500595CF3 /* CategoryEntity+CoreDataProperties.swift */,
+				CA3AFA2029B93A6500595CF3 /* ProductEntity+CoreDataClass.swift */,
+				CA3AFA2129B93A6500595CF3 /* ProductEntity+CoreDataProperties.swift */,
 			);
 			path = "CoreData SubClasses";
 			sourceTree = "<group>";
@@ -98,7 +104,7 @@
 		CA43585729B1A9B0004E3459 = {
 			isa = PBXGroup;
 			children = (
-				CA1DF13529B6B62000D3ABC0 /* GoogleService-Info.plist */,
+				CA1DF16129B8FDAB00D3ABC0 /* GoogleService-Info.plist */,
 				CA43586229B1A9B0004E3459 /* Shadow Mountain */,
 				CA43586129B1A9B0004E3459 /* Products */,
 				CA4358C529B262BA004E3459 /* Frameworks */,
@@ -116,15 +122,14 @@
 		CA43586229B1A9B0004E3459 /* Shadow Mountain */ = {
 			isa = PBXGroup;
 			children = (
-				CA1DF13F29B7A35300D3ABC0 /* Trannies */,
 				CA43588229B24D8F004E3459 /* view Model */,
 				CA43588029B24D7F004E3459 /* View */,
 				CA43587F29B24D74004E3459 /* Model */,
 				CA43588429B24DA6004E3459 /* Utilities */,
 				CA4358A129B25282004E3459 /* Managers */,
 				CA1DF14229B7A44500D3ABC0 /* CoreData SubClasses */,
+				CA1DF13F29B7A35300D3ABC0 /* Trannies */,
 				CA4358A229B25291004E3459 /* Crap */,
-				CA43586729B1A9B2004E3459 /* Assets.xcassets */,
 				CA43586929B1A9B2004E3459 /* Preview Content */,
 			);
 			path = "Shadow Mountain";
@@ -202,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				CA43586329B1A9B0004E3459 /* Shadow_MountainApp.swift */,
+				CA43586729B1A9B2004E3459 /* Assets.xcassets */,
 				CA4358A329B252C8004E3459 /* coredata.xcdatamodeld */,
 			);
 			path = Crap;
@@ -280,8 +286,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA43586B29B1A9B2004E3459 /* Preview Assets.xcassets in Resources */,
-				CA1DF13629B6B62000D3ABC0 /* GoogleService-Info.plist in Resources */,
 				CA43586829B1A9B2004E3459 /* Assets.xcassets in Resources */,
+				CA1DF16229B8FDAB00D3ABC0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +300,7 @@
 			files = (
 				CA43589229B24EB0004E3459 /* ProductView.swift in Sources */,
 				CA43589629B24EBE004E3459 /* HomeButton.swift in Sources */,
-				CA1DF13D29B7A2E900D3ABC0 /* CategoryEntity+CoreDataClass.swift in Sources */,
+				CA3AFA2529B93A6500595CF3 /* ProductEntity+CoreDataProperties.swift in Sources */,
 				CA4358A529B252C8004E3459 /* coredata.xcdatamodeld in Sources */,
 				CA1DF14129B7A37900D3ABC0 /* UIImageTranny.swift in Sources */,
 				CA43588829B24E36004E3459 /* HomeView.swift in Sources */,
@@ -302,8 +308,8 @@
 				CA1DF14429B7AB7300D3ABC0 /* CategoryModel.swift in Sources */,
 				CA4358CB29B3B4B6004E3459 /* PoductEntity+Extension.swift in Sources */,
 				CA43589129B24EB0004E3459 /* CategoriesView.swift in Sources */,
-				CA1DF13E29B7A2E900D3ABC0 /* CategoryEntity+CoreDataProperties.swift in Sources */,
 				CA43586429B1A9B0004E3459 /* Shadow_MountainApp.swift in Sources */,
+				CA3AFA2329B93A6500595CF3 /* CategoryEntity+CoreDataProperties.swift in Sources */,
 				CA43589E29B24EE1004E3459 /* Constants.swift in Sources */,
 				CA43588629B24E20004E3459 /* ProductModel.swift in Sources */,
 				CA43589829B24EBE004E3459 /* CategoryImage.swift in Sources */,
@@ -313,6 +319,8 @@
 				CA43588C29B24EA4004E3459 /* SpecialsView.swift in Sources */,
 				CA4358A029B2519E004E3459 /* Fire ViewModel.swift in Sources */,
 				CA4358A729B252EE004E3459 /* CoreData Manager.swift in Sources */,
+				CA3AFA2429B93A6500595CF3 /* ProductEntity+CoreDataClass.swift in Sources */,
+				CA3AFA2229B93A6500595CF3 /* CategoryEntity+CoreDataClass.swift in Sources */,
 				CA1DF14629B7AD2B00D3ABC0 /* CategoryEntity+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

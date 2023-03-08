@@ -10,22 +10,41 @@ import CoreData
 
 extension ProductEntity: BaseModel {
     
-  
+    
     static var specials: NSFetchRequest<ProductEntity> {
         let request = ProductEntity.fetchRequest()
         request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
         request.predicate = NSPredicate(format: "%K CONTAINS[c] %@", #keyPath(ProductEntity.category), "specials")
         return request
     }
-    static var all: NSFetchRequest<ProductEntity> {
-         let request = ProductEntity.fetchRequest()
-         request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
-        request.predicate = NSPredicate(format: "NOT %K CONTAINS[c] %@", #keyPath(ProductEntity.category), "specials")
-         return request
-     }
-    static var categories: NSFetchRequest<ProductEntity> {
+    static var breakfastSandwiches: NSFetchRequest<ProductEntity> {
         let request = ProductEntity.fetchRequest()
-        request.sortDescriptors = [NSSortDescriptor(key: "titles", ascending: true)]
+        request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
+        request.predicate = NSPredicate(format: "%K CONTAINS[c] %@", #keyPath(ProductEntity.category), "Breakfast Sandwiches")
         return request
     }
+    static var coldDrinks: NSFetchRequest<ProductEntity> {
+        let request = ProductEntity.fetchRequest()
+        request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
+        request.predicate = NSPredicate(format: "%K CONTAINS[c] %@", #keyPath(ProductEntity.category), "Cold Drinks")
+        return request
+    }
+    static var hotDrinks: NSFetchRequest<ProductEntity> {
+        let request = ProductEntity.fetchRequest()
+        request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
+        request.predicate = NSPredicate(format: "%K CONTAINS[c] %@", #keyPath(ProductEntity.category), "Hot Drinks")
+        return request
+    }
+    static var cookies: NSFetchRequest<ProductEntity> {
+        let request = ProductEntity.fetchRequest()
+        request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
+        request.predicate = NSPredicate(format: "%K CONTAINS[c] %@", #keyPath(ProductEntity.category), "Cookies")
+        return request
+    }
+    static var muffinTops: NSFetchRequest<ProductEntity> {
+         let request = ProductEntity.fetchRequest()
+         request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
+        request.predicate = NSPredicate(format: "%K CONTAINS[c] %@", #keyPath(ProductEntity.category), "Muffin Tops")
+         return request
+     }
 }

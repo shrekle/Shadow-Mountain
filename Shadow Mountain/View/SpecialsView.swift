@@ -16,22 +16,24 @@ struct SpecialsView: View {
         
         TabView(selection: $tabIndex) {
             
-            ForEach(0..<model.specialsArray.count, id: \.self) { index in
+            ForEach(0..<model.specialsArray.count, id: \.self) { i in
+
                 ZStack {
+
                     VStack(spacing: 5) {
                         Text(Constants.specials)
                             .foregroundColor(.black)
                             .bold()
                             .padding(.top, 2)
                         
-                        Image("stacysky")
-                            .resizable()
-                            .clipped()
-                        
-                        Text(model.specialsArray[index].title)
-                            .foregroundColor(.black)
-                            .bold()
-                            .padding(.bottom, 5)
+//                        Image(uiImage: model.specialsArray[i].image ?? UIImage())
+//                            .resizable()
+//                            .clipped()
+//
+//                        Text(model.specialsArray[i].title)
+//                            .foregroundColor(.black)
+//                            .bold()
+//                            .padding(.bottom, 5)
                     }
                 }
                 .background(.gray)

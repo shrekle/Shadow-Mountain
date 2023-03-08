@@ -2,7 +2,7 @@
 //  CategoryEntity+CoreDataProperties.swift
 //  Shadow Mountain
 //
-//  Created by adrian garcia on 3/7/23.
+//  Created by adrian garcia on 3/8/23.
 //
 //
 
@@ -16,8 +16,8 @@ extension CategoryEntity {
         return NSFetchRequest<CategoryEntity>(entityName: "CategoryEntity")
     }
 
-    @NSManaged public var title: String?
     @NSManaged public var image: UIImage?
+    @NSManaged public var title: String?
 
 }
 

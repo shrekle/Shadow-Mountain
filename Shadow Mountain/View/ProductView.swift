@@ -12,12 +12,29 @@ struct ProductView: View {
     @EnvironmentObject var model: ViewModel
     
     var category: CategoryModel
+
+    init(category: CategoryModel) {
+        self.category = category
+    }
     
-//    func blah(category: CategoryModel)-> ProductModel {
-//
-//
-//
-//    }
+    var products: [ProductModel] {
+        
+        switch category.title {
+        case "Breakfast Sandwhiches":
+            return model.breakfastSandwichesArray
+//        case "Cold Drinks":
+//            return model.coldDrinksArray
+        case "Hot Drinks":
+            return model.hotDrinksArray
+        case "Muffin Tops":
+            return model.muffinTopsArray
+        case "Cookies":
+            return model.cookiesArray
+        default:
+            return model.cookiesArray
+        }
+        
+    }
     
     var body: some View {
         
@@ -28,10 +45,10 @@ struct ProductView: View {
                     
                     CategoryImage(category: category)
                     
-//                    ForEach(model.currentCategory) { product in
-//                        ProductCard(product: product)
-//                            .padding(.horizontal)
-//                    }
+                    ForEach(products) { product in
+                        ProductCard(product: product)
+                            .padding(.horizontal)
+                    }
                 }
                 .onAppear {
                    
@@ -39,6 +56,16 @@ struct ProductView: View {
             }
         }
         .background(.purple)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Image("logoBlack")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 95, height: 60)
+                    .clipShape(Circle())
+                    .padding(.top)
+            }
+        }
     }
 }
 

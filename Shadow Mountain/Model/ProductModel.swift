@@ -5,10 +5,10 @@
 //  Created by adrian garcia on 10/28/22.
 //
 
-import Foundation
+import SwiftUI
 import CoreData
 
-struct ProductModel: Identifiable {
+struct ProductModel: Identifiable, Hashable {
     
     private var productEntity: ProductEntity
     
@@ -29,7 +29,7 @@ struct ProductModel: Identifiable {
         productEntity.size
     }
     var price: [String] {
-        productEntity.size ?? []
+        productEntity.price ?? []
     }
     var detail: String? {
         productEntity.detail
@@ -37,4 +37,8 @@ struct ProductModel: Identifiable {
     var type: [String]? {
         productEntity.type
     }
+//    var image: UIImage? {
+//        productEntity.image
+//    }
+    
 }

@@ -21,25 +21,31 @@ struct CategoriesView: View {
         LazyVGrid(columns: columns, spacing: 15) {
             
             ForEach(model.categoriesArray) { category in
-                
-                NavigationLink(value: category) {
+                NavigationLink {
+                    ProductView(category: category)
+                } label: {
                     HomeButton(category: category)
+                    
                 }
+                
+                //                NavigationLink(value: category) {
+                //                    HomeButton(category: category)
+                //                }
             }
         }
-        .navigationDestination(for: CategoryModel.self) { category in
-            ProductView(category: category)
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Image("logoBlack")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 95, height: 60)
-                            .clipShape(Circle())
-                            .padding(.top)
-                    }
-                }
-        }
+        //        .navigationDestination(for: CategoryModel.self) { category in
+        //            ProductView(category: category)
+        //                .toolbar {
+        //                    ToolbarItem(placement: .navigationBarTrailing) {
+        //                        Image("logoBlack")
+        //                            .resizable()
+        //                            .aspectRatio(contentMode: .fit)
+        //                            .frame(width: 95, height: 60)
+        //                            .clipShape(Circle())
+        //                            .padding(.top)
+        //                    }
+        //                }
+        //        }
     }
 }
 

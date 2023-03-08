@@ -37,8 +37,7 @@ struct ProductModel: Identifiable, Hashable {
     var type: [String]? {
         productEntity.type
     }
-//    var image: UIImage? {
-//        productEntity.image
-//    }
-    
+    var image: UIImage? {
+        productEntity.image
+    }
 }

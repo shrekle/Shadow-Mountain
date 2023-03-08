@@ -88,9 +88,7 @@ extension ViewModel: NSFetchedResultsControllerDelegate {
         if let results = controller.fetchedObjects as? [CategoryEntity] {
             categoriesArray = results.map(CategoryModel.init)
         }
-        
         if let results = controller.fetchedObjects as? [ProductEntity]  {
-            
             switch controller.fetchRequest {
             case ProductEntity.breakfastSandwiches:
                 breakfastSandwichesArray = results.map(ProductModel.init)
@@ -115,11 +113,9 @@ extension ViewModel {
     func getCrap() {
         fireModel.loadCategories()
         fireModel.loadMenu()
-        //        printArrays()
     }
     
     func printArrays() {
-        
         cookiesArray.forEach { i in
             print("😠 \(i.title)")
             print("😠 \(i.category)")
@@ -157,14 +153,6 @@ extension ViewModel {
         specialsArray.forEach { i in
             print("😠 \(i.title)")
         }
-        //        print("🥸 cookiesArray \(cookiesArray.description)")
-        //        print("🥸 muffinTopsArray \(muffinTopsArray.description)")
-        //        print("🥸 hotDrinksArray \(hotDrinksArray.description)")
-        //        print("🥸 coldDrinksArray \(coldDrinksArray.description)")
-        //        print("🥸 breakfastSandwichesArray \(breakfastSandwichesArray.description)")
-        //        print("🥸 categoriesArray \(categoriesArray.description)")
-        //        print("🥸 specialsArray \(specialsArray.description)")
-        
     }
     
     static func printCrap(cat: CategoryModel?, prod: ProductModel?) {

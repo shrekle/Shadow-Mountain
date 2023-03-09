@@ -16,15 +16,19 @@ struct HeaderView: View {
             Image("logoBlack")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 120, height: 85)
+                .frame(height: 75)
                 .clipShape(Circle())
+                .padding(.trailing)
+                .shadow(radius: 10)
+
                 
             Text("'No amount of money ever bought a second of time'")
-                .foregroundColor(Color(UIColor.darkGray))
-                .font(.body)
+                .foregroundColor(.black)
+//                .foregroundColor(Color(UIColor.darkGray))
+                .font(.subheadline)
+                .fontWeight(.regular)
                 .bold()
-                .padding(.top,40)
-                
+                .padding(.top, 35)
         }
         .padding()
     }

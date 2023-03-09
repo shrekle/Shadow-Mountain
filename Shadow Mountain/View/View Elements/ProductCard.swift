@@ -20,10 +20,12 @@ struct ProductCard: View {
                         .font(.title)
                         .padding(.top)
                     
-                    Text(product.detail ?? "🥵 no detail")
-                        .font(.footnote)
-                        .padding(.bottom, 1)
-                        .padding(.top, 0)
+                    if let detail = product.detail {
+                        Text(detail)
+                            .font(.footnote)
+                            .padding(.bottom, 1)
+                            .padding(.top, 0)
+                    }
                     
                     HStack(spacing: 30) {
                         
@@ -31,7 +33,7 @@ struct ProductCard: View {
                             
                             VStack(alignment: .leading) {
                                 if product.size != nil {
-                                    Text(product.size![i])
+                                    Text("\(product.size![i]) oz")
                                 }
                                 Text("$\( product.price[i])")
                             }

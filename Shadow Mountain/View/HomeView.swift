@@ -15,7 +15,7 @@ struct HomeView: View {
         
         NavigationStack {
             
-            VStack(spacing: 0) {
+            VStack(spacing: -15) {
                 
                 Button("PRESS ME") {
                     model.getCrap()
@@ -25,16 +25,16 @@ struct HomeView: View {
 
                 SpecialsView()
                     .aspectRatio(CGSize(width: 160, height: 145), contentMode: .fit)
-                    .padding(.horizontal, 20)
-                    .shadow(radius: 5)
+                    .padding(.horizontal, 30)
 
                 ScrollView {
                     CategoriesView()
                         .padding(.horizontal)
                         .padding(.bottom, 40)
-                        .padding(.top, 10)
+//                        .padding(.top, 10)
                 }
             }
+//            .background(.white)
         }
     }
 }

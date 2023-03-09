@@ -74,8 +74,7 @@ class ViewModel: NSObject, ObservableObject {
             hotDrinksArray = hotDrinksObjects.map(ProductModel.init)
             muffinTopsArray = muffinTopsObjects.map(ProductModel.init)
             cookiesArray = cookiesObjects.map(ProductModel.init)
-            
-            printArrays()
+           
         }
         catch let error { print("🤑 \(error)") }
     }

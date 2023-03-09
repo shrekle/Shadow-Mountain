@@ -14,40 +14,49 @@ struct SpecialsView: View {
     
     var body: some View {
         
-        TabView(selection: $tabIndex) {
+        VStack(spacing: 0) {
             
-            ForEach(0..<model.specialsArray.count, id: \.self) { i in
+            TabView(selection: $tabIndex) {
                 
-                VStack(spacing: 5) {
-                    Text(Constants.specials)
-                        .foregroundColor(.black)
-                        .bold()
-                        .padding(.top, 2)
+                ForEach(0..<model.specialsArray.count, id: \.self) { i in
                     
-                    Image(uiImage: model.specialsArray[i].image ?? UIImage())
-                        .resizable()
-                        .clipped()
-                    
-                    Text(model.specialsArray[i].title)
-                        .foregroundColor(.black)
-                        .bold()
-                        .padding(.bottom, 5)
+                    VStack(spacing: 5) {
+                        Text(Constants.specials)
+                            .foregroundColor(.black)
+                            .fontWeight(.light)
+                            .padding(.top, 2)
+                        
+                        Image(uiImage: model.specialsArray[i].image ?? UIImage())
+                            .resizable()
+                            .clipped()
+                        
+                        Text(model.specialsArray[i].title)
+                            .foregroundColor(.black)
+                            .fontWeight(.light)
+                            .padding(.bottom, 5)
+                    }
+                    .background(.white)
+                    .mask(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                    .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke( LinearGradient(colors: [.black.opacity(1), .black.opacity(1)], startPoint: .bottom, endPoint: .top), lineWidth: 0.5))
+//                        .blendMode(.overlay)
+//                    )
+//                    .shadow(color: .white, radius: 10)
+                    .shadow(radius: 5)
+//                    .shadow(radius: 10)
+                    .tag(i)
+                    .padding(.bottom, 40)
+                    .padding(.horizontal, 20)
+                    .padding(.top, 20)
                 }
-                .background(.white)
-                .mask(RoundedRectangle(cornerRadius: 10, style: .continuous))
-                .tag(i)
-                .padding(.bottom, 50)
-                .padding(.horizontal, 10)
-                .padding(.top, 8)
             }
+            .tabViewStyle(.page)
         }
-        .tabViewStyle(.page)
     }
 }
 
-//struct SpecialsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SpecialsView()
-//            .environmentObject(ViewModel())
-//    }
-//}
+struct SpecialsView_Previews: PreviewProvider {
+    static var previews: some View {
+        SpecialsView()
+            .environmentObject(ViewModel())
+    }
+}

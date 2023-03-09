@@ -18,21 +18,21 @@ struct CategoriesView: View {
     
     var body: some View {
         
-        LazyVGrid(columns: columns, spacing: 15) {
+        LazyVGrid(columns: columns) {
             
             ForEach(model.categoriesArray) { category in
                 NavigationLink {
                     ProductView(category: category)
                 } label: {
                     HomeButton(category: category)
-                    
                 }
-                
                 //                NavigationLink(value: category) {
                 //                    HomeButton(category: category)
                 //                }
             }
+           
         }
+//        .background(.yellow)
         //        .navigationDestination(for: CategoryModel.self) { category in
         //            ProductView(category: category)
         //                .toolbar {

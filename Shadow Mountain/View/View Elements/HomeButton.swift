@@ -16,19 +16,28 @@ struct HomeButton: View {
         ZStack {
             
             Text(category.title)
+                .font(.subheadline)
                 .foregroundColor(.black)
-                .bold()
+                .fontWeight(.light)
                 .frame(width: 170, height: 50)
             
         }
         .background(.white)
         .mask(RoundedRectangle(cornerRadius: 10, style: .continuous))
+//        .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke( LinearGradient(colors: [.black.opacity(1), .black.opacity(1)], startPoint: .bottom, endPoint: .top), lineWidth: 0.5))
+//        .shadow(color: .white, radius: 10)
+
         .shadow(radius: 5)
+//        .shadow(radius: 5)
+        .padding(10)
     }
 }
-//
+
 //struct HomeButton_Previews: PreviewProvider {
 //    static var previews: some View {
-//        HomeButton()
+//
+//        let cat = CategoryModel(category: CategoryEntity())
+//
+//        HomeButton(category: cat)
 //    }
 //}

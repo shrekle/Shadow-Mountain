@@ -23,6 +23,7 @@ struct HomeButton: View {
         }
         .background(.white)
         .mask(RoundedRectangle(cornerRadius: 10, style: .continuous))
+        .shadow(radius: 5)
     }
 }
 //

@@ -33,13 +33,12 @@ struct SpecialsView: View {
                         .bold()
                         .padding(.bottom, 5)
                 }
-                .background(.gray)
+                .background(.white)
                 .mask(RoundedRectangle(cornerRadius: 10, style: .continuous))
                 .tag(i)
                 .padding(.bottom, 50)
                 .padding(.horizontal, 10)
                 .padding(.top, 8)
-                
             }
         }
         .tabViewStyle(.page)

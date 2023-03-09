@@ -42,8 +42,9 @@ struct ProductCard: View {
             }
             .foregroundColor(.black)
             .padding(.horizontal, 40)
-            .background(.yellow)
+            .background(.white) // needs to have this background wrapper for the shadow to work, unles i wasnt to put a frame or rectangle behind it or on it
             .mask(RoundedRectangle(cornerRadius: 10, style: .continuous))
+            .shadow(radius: 5)
     }
 }
 

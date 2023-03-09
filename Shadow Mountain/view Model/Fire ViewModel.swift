@@ -59,7 +59,6 @@ class FireViewModel {
                     self.db.collection("menu").document(doc.documentID).collection(key).document("details").getDocument { snap, error in
                         guard error == nil, let snap else { print("🤡 details for products failed"); return }
                         
-                        
                         if let path = snap["image"] as? String {
                             
                             let fileRef = self.storageRef.child(path)

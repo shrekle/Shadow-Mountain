@@ -26,6 +26,7 @@ struct HomeView: View {
                 SpecialsView()
                     .aspectRatio(CGSize(width: 160, height: 145), contentMode: .fit)
                     .padding(.horizontal, 20)
+                    .shadow(radius: 5)
 
                 ScrollView {
                     CategoriesView()

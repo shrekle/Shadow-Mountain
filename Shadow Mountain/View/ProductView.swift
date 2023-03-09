@@ -20,10 +20,10 @@ struct ProductView: View {
     var products: [ProductModel] {
         
         switch category.title {
-        case "Breakfast Sandwhiches":
+        case "Breakfast Sandwiches":
             return model.breakfastSandwichesArray
-//        case "Cold Drinks":
-//            return model.coldDrinksArray
+        case "Cold Drinks":
+            return model.coldDrinksArray
         case "Hot Drinks":
             return model.hotDrinksArray
         case "Muffin Tops":
@@ -44,6 +44,7 @@ struct ProductView: View {
                 LazyVStack(spacing: 10) {
                     
                     CategoryImage(category: category)
+                        .shadow(radius: 5)
                     
                     ForEach(products) { product in
                         ProductCard(product: product)
@@ -55,7 +56,7 @@ struct ProductView: View {
                 }
             }
         }
-        .background(.purple)
+//        .background(.white)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Image("logoBlack")

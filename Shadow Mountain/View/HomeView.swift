@@ -15,29 +15,37 @@ struct HomeView: View {
         
         NavigationStack {
             
-            VStack(spacing: -15) {
+            VStack {
                 
-                Button("PRESS ME") {
-                    model.getCrap()
+                VStack(spacing: -15) {
+                    
+                    Button("PRESS ME") {
+                        model.getCrap()
+                    }
+                    
+                    HeaderView()
+                    
+                    SpecialsView()
+                        .aspectRatio(CGSize(width: 160, height: 145), contentMode: .fit)
+                        .padding(.horizontal, 40)
+                    
+                    ScrollView {
+                        CategoriesView()
+                            .padding(.horizontal)
+                            .padding(.bottom, 40)
+                    }
                 }
-   
-                HeaderView()
-
-                SpecialsView()
-                    .aspectRatio(CGSize(width: 160, height: 145), contentMode: .fit)
-                    .padding(.horizontal, 30)
-
-                ScrollView {
-                    CategoriesView()
-                        .padding(.horizontal)
-                        .padding(.bottom, 40)
-//                        .padding(.top, 10)
-                }
+                .background(
+                    Image("shadowMountainBG2")
+                        .resizable()
+                        .scaledToFill()
+                        .ignoresSafeArea()
+                )
             }
-//            .background(.white)
         }
     }
 }
+
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {

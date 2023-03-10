@@ -13,13 +13,11 @@ struct SpecialsView: View {
     @State var tabIndex = 0
     
     var body: some View {
-        
-        VStack(spacing: 0) {
-            
+        ZStack {
             TabView(selection: $tabIndex) {
                 
                 ForEach(0..<model.specialsArray.count, id: \.self) { i in
-                    
+                    ZStack {
                     VStack(spacing: 5) {
                         Text(Constants.specials)
                             .foregroundColor(.black)
@@ -28,29 +26,35 @@ struct SpecialsView: View {
                         
                         Image(uiImage: model.specialsArray[i].image ?? UIImage())
                             .resizable()
-                            .clipped()
+                        //                            .clipped()
                         
                         Text(model.specialsArray[i].title)
                             .foregroundColor(.black)
                             .fontWeight(.light)
                             .padding(.bottom, 5)
                     }
-                    .background(.white)
+                    .background(.white.opacity(0.9))
                     .mask(RoundedRectangle(cornerRadius: 10, style: .continuous))
                     .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke( LinearGradient(colors: [.black.opacity(1), .black.opacity(1)], startPoint: .bottom, endPoint: .top), lineWidth: 0.5))
-//                        .blendMode(.overlay)
-//                    )
-//                    .shadow(color: .white, radius: 10)
-                    .shadow(radius: 5)
-//                    .shadow(radius: 10)
+                    
+                    .shadow(color: .white.opacity(0.3), radius: 5)
                     .tag(i)
                     .padding(.bottom, 40)
                     .padding(.horizontal, 20)
                     .padding(.top, 20)
+                    
+                                    Image("cupSquare")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(height: 70)
+                                        .offset(x: 120, y: -100)
+                        
                 }
+            }
             }
             .tabViewStyle(.page)
         }
+        
     }
 }
 

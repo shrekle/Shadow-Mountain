@@ -19,7 +19,7 @@ struct Shadow_MountainApp: App {
     
     var body: some Scene {
         WindowGroup {
-            HomeView()
+           HomeView()
                 .environmentObject(ViewModel())
                 .environment(\.managedObjectContext, context)
         }

@@ -44,9 +44,11 @@ struct ProductCard: View {
             }
             .foregroundColor(.black)
             .padding(.horizontal, 40)
-            .background(.white) // needs to have this background wrapper for the shadow to work, unles i wasnt to put a frame or rectangle behind it or on it
+            .background(.white.opacity(0.9)) // needs to have this background wrapper for the shadow to work, unles i wasnt to put a frame or rectangle behind it or on it
             .mask(RoundedRectangle(cornerRadius: 10, style: .continuous))
-            .shadow(radius: 5)
+            .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke( LinearGradient(colors: [.black.opacity(1), .black.opacity(1)], startPoint: .bottom, endPoint: .top), lineWidth: 0.5))
+            .shadow(color: .white.opacity(0.3), radius: 5)
+            .padding(.top)
     }
 }
 

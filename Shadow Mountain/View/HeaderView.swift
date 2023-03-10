@@ -13,17 +13,17 @@ struct HeaderView: View {
         
         HStack(spacing: 0) {
             
-            Image("logoBlack")
+            Image("logoWhite")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 75)
                 .clipShape(Circle())
                 .padding(.trailing)
-                .shadow(radius: 10)
+//                .shadow(radius: 10)
 
                 
             Text("'No amount of money ever bought a second of time'")
-                .foregroundColor(.black)
+                .foregroundColor(.white)
 //                .foregroundColor(Color(UIColor.darkGray))
                 .font(.subheadline)
                 .fontWeight(.regular)

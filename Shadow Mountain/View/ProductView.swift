@@ -12,7 +12,7 @@ struct ProductView: View {
     @EnvironmentObject var model: ViewModel
     
     var category: CategoryModel
-
+    
     init(category: CategoryModel) {
         self.category = category
     }
@@ -33,43 +33,79 @@ struct ProductView: View {
         default:
             return model.cookiesArray
         }
-        
     }
     
     var body: some View {
         
-        VStack(spacing: 0) {
+        ZStack {
             
-            ScrollView(showsIndicators: false) {
-                LazyVStack(spacing: 10) {
+            
+            VStack(spacing: -80) {
+                
+                ZStack {
+                    Image(uiImage: category.image)
+                        .resizable()
+                        .scaledToFill()
+                        .clipped()
                     
-                    CategoryImage(category: category)
-                        .shadow(radius: 5)
-                    
-                    ForEach(products) { product in
-                        ProductCard(product: product)
-                            .padding(.horizontal)
+                    VStack {
+                        
+                        Spacer()
+                        
+                        ZStack {
+                            
+                            Rectangle()
+                                .frame(maxWidth: .infinity, maxHeight: 40)
+                                .foregroundColor(.black)
+                            //                                .opacity(0.5)
+                            
+                            Text(category.title)
+                                .font(.largeTitle)
+                                .foregroundColor(.white)
+                        }
                     }
                 }
-                .onAppear {
-                   
+                .frame(height: 300)
+                .ignoresSafeArea()
+                ScrollView(showsIndicators: false) {
+                    LazyVStack(spacing: 10) {
+                        
+                        //                    CategoryImage(category: category)
+                        //                        .shadow(radius: 5)
+                        
+                        ForEach(products) { product in
+                            ProductCard(product: product)
+                                .padding(.horizontal)
+                        }
+                    }
+                }
+            }
+//            .background(
+//                Image("shadowMountainBG3")
+//                    .resizable()
+//                    .scaledToFill()
+//                    .ignoresSafeArea()
+//            )
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Image("logoBlack")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 95, height: 60)
+                        .clipShape(Circle())
+                        .padding(.top)
                 }
             }
         }
-//        .background(.white)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Image("logoBlack")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 95, height: 60)
-                    .clipShape(Circle())
-                    .padding(.top)
-            }
-        }
+        .background(
+            Image("shadowMountainBG2")
+                .resizable()
+                .scaledToFit()
+                .ignoresSafeArea()
+                .padding(.trailing, 58)
+        )
     }
 }
-
 //struct ProductView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        ProductView(category: Constants.teasAndLemonades)

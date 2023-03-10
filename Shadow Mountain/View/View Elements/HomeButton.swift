@@ -16,19 +16,16 @@ struct HomeButton: View {
         ZStack {
             
             Text(category.title)
-                .font(.subheadline)
+                .font(.body)
                 .foregroundColor(.black)
                 .fontWeight(.light)
                 .frame(width: 170, height: 50)
             
         }
-        .background(.white)
+        .background(.white.opacity(0.9))
         .mask(RoundedRectangle(cornerRadius: 10, style: .continuous))
-//        .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke( LinearGradient(colors: [.black.opacity(1), .black.opacity(1)], startPoint: .bottom, endPoint: .top), lineWidth: 0.5))
-//        .shadow(color: .black, radius: 5)
-
-        .shadow(radius: 5)
-//        .shadow(radius: 5)
+        .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke( LinearGradient(colors: [.black.opacity(1), .black.opacity(1)], startPoint: .bottom, endPoint: .top), lineWidth: 0.5))
+        .shadow(color: .white.opacity(0.3), radius: 5)
         .padding(10)
     }
 }

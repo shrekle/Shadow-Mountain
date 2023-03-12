@@ -57,7 +57,6 @@ struct ProductView: View {
                             Rectangle()
                                 .frame(maxWidth: .infinity, maxHeight: 40)
                                 .foregroundColor(.black)
-                            //                                .opacity(0.5)
                             
                             Text(category.title)
                                 .font(.largeTitle)
@@ -69,10 +68,7 @@ struct ProductView: View {
                 .ignoresSafeArea()
                 ScrollView(showsIndicators: false) {
                     LazyVStack(spacing: 10) {
-                        
-                        //                    CategoryImage(category: category)
-                        //                        .shadow(radius: 5)
-                        
+                    
                         ForEach(products) { product in
                             ProductCard(product: product)
                                 .padding(.horizontal)
@@ -80,22 +76,16 @@ struct ProductView: View {
                     }
                 }
             }
-//            .background(
-//                Image("shadowMountainBG3")
-//                    .resizable()
-//                    .scaledToFill()
-//                    .ignoresSafeArea()
-//            )
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Image("logoBlack")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 95, height: 60)
-                        .clipShape(Circle())
-                        .padding(.top)
-                }
-            }
+//            .toolbar {
+//                ToolbarItem(placement: .navigationBarTrailing) {
+//                    Image("logoBlack")
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fit)
+//                        .frame(width: 95, height: 60)
+//                        .clipShape(Circle())
+//                        .padding(.top)
+//                }
+//            }
         }
         .background(
             Image("shadowMountainBG2")

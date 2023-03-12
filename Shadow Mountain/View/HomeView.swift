@@ -13,6 +13,8 @@ struct HomeView: View {
     
     var body: some View {
         
+        /// CUSTOM TAB BAR
+        
         NavigationStack {
             
             VStack {
@@ -25,9 +27,9 @@ struct HomeView: View {
                     
                     HeaderView()
                     
-                    SpecialsView()
+                    SpecialsCaruselView()
                         .aspectRatio(CGSize(width: 160, height: 145), contentMode: .fit)
-                        .padding(.horizontal, 40)
+                        .padding(.horizontal, 30)
                     
                     ScrollView {
                         CategoriesView()

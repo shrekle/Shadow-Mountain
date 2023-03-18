@@ -53,7 +53,6 @@ struct SpecialsCaruselView: View {
                                 .scaledToFit()
                                 .frame(height: 60)
                                 .offset(x: 130, y: -110) // work with 40 padding perfect
-                            
                         }
                         .onTapGesture {
                             
@@ -82,7 +81,7 @@ struct SpecialsCaruselView: View {
 //                    isPresented = true
 //                    print("crap \(crap)")
 //                }
-                }
+              }
                 .tabViewStyle(.page)
             }
             

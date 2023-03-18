@@ -20,7 +20,7 @@ class CoreData  {
         
         container = NSPersistentContainer(name: "coredata")
         container.loadPersistentStores { description, error in
-            if let error { print("💩 coredata initialization took a dump!!!")}
+            if let error { print("💩 coredata initialization took a dump!!!: \(error)")}
         }
         contex = container.viewContext
     }

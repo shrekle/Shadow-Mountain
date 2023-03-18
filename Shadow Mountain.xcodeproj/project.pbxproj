@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA1260C329C60775001ECCF6 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1260C129C60774001ECCF6 /* CustomTabBar.swift */; };
+		CA1260C429C60775001ECCF6 /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1260C229C60774001ECCF6 /* TabBarButton.swift */; };
+		CA1260C629C6164C001ECCF6 /* BackgroundWithTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1260C529C6164C001ECCF6 /* BackgroundWithTab.swift */; };
 		CA1DF14129B7A37900D3ABC0 /* UIImageTranny.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DF14029B7A37900D3ABC0 /* UIImageTranny.swift */; };
 		CA1DF14429B7AB7300D3ABC0 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DF14329B7AB7300D3ABC0 /* CategoryModel.swift */; };
 		CA1DF14629B7AD2B00D3ABC0 /* CategoryEntity+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DF14529B7AD2B00D3ABC0 /* CategoryEntity+Extension.swift */; };
@@ -36,10 +39,14 @@
 		CA4358C729B262BA004E3459 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CA4358C629B262BA004E3459 /* FirebaseStorage */; };
 		CA4358C929B3B2D4004E3459 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4358C829B3B2D4004E3459 /* BaseModel.swift */; };
 		CA4358CB29B3B4B6004E3459 /* PoductEntity+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4358CA29B3B4B6004E3459 /* PoductEntity+Extension.swift */; };
+		CA477CB129C62ECC00A86920 /* TabbyTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA477CB029C62ECC00A86920 /* TabbyTabs.swift */; };
 		CA4B679A29BBE3AB002D0AEA /* SpecialsSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4B679929BBE3AB002D0AEA /* SpecialsSheetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA1260C129C60774001ECCF6 /* CustomTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		CA1260C229C60774001ECCF6 /* TabBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
+		CA1260C529C6164C001ECCF6 /* BackgroundWithTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundWithTab.swift; sourceTree = "<group>"; };
 		CA1DF14029B7A37900D3ABC0 /* UIImageTranny.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageTranny.swift; sourceTree = "<group>"; };
 		CA1DF14329B7AB7300D3ABC0 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		CA1DF14529B7AD2B00D3ABC0 /* CategoryEntity+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryEntity+Extension.swift"; sourceTree = "<group>"; };
@@ -68,6 +75,7 @@
 		CA4358A629B252EE004E3459 /* CoreData Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreData Manager.swift"; sourceTree = "<group>"; };
 		CA4358C829B3B2D4004E3459 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		CA4358CA29B3B4B6004E3459 /* PoductEntity+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PoductEntity+Extension.swift"; sourceTree = "<group>"; };
+		CA477CB029C62ECC00A86920 /* TabbyTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbyTabs.swift; sourceTree = "<group>"; };
 		CA4B679929BBE3AB002D0AEA /* SpecialsSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialsSheetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA1260C029C60774001ECCF6 /* Custom Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				CA1260C129C60774001ECCF6 /* CustomTabBar.swift */,
+				CA1260C229C60774001ECCF6 /* TabBarButton.swift */,
+			);
+			path = "Custom Tab Bar";
+			sourceTree = "<group>";
+		};
 		CA1DF13F29B7A35300D3ABC0 /* Trannies */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,13 +177,16 @@
 		CA43588029B24D7F004E3459 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CA477CB029C62ECC00A86920 /* TabbyTabs.swift */,
 				CA43588729B24E36004E3459 /* HomeView.swift */,
 				CA43588929B24E98004E3459 /* HeaderView.swift */,
 				CA43588B29B24EA4004E3459 /* SpecialsCaruselView.swift */,
 				CA43588E29B24EB0004E3459 /* CategoriesView.swift */,
 				CA43588F29B24EB0004E3459 /* ProductView.swift */,
 				CA4B679929BBE3AB002D0AEA /* SpecialsSheetView.swift */,
+				CA1260C029C60774001ECCF6 /* Custom Tab Bar */,
 				CA43588129B24D84004E3459 /* View Elements */,
+				CA1260C529C6164C001ECCF6 /* BackgroundWithTab.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -306,6 +326,7 @@
 				CA3AFA2529B93A6500595CF3 /* ProductEntity+CoreDataProperties.swift in Sources */,
 				CA4358A529B252C8004E3459 /* coredata.xcdatamodeld in Sources */,
 				CA1DF14129B7A37900D3ABC0 /* UIImageTranny.swift in Sources */,
+				CA1260C429C60775001ECCF6 /* TabBarButton.swift in Sources */,
 				CA43588829B24E36004E3459 /* HomeView.swift in Sources */,
 				CA43589729B24EBE004E3459 /* ProductCard.swift in Sources */,
 				CA1DF14429B7AB7300D3ABC0 /* CategoryModel.swift in Sources */,
@@ -317,7 +338,10 @@
 				CA43588629B24E20004E3459 /* ProductModel.swift in Sources */,
 				CA43589829B24EBE004E3459 /* CategoryImage.swift in Sources */,
 				CA4358C929B3B2D4004E3459 /* BaseModel.swift in Sources */,
+				CA1260C629C6164C001ECCF6 /* BackgroundWithTab.swift in Sources */,
+				CA1260C329C60775001ECCF6 /* CustomTabBar.swift in Sources */,
 				CA43588A29B24E98004E3459 /* HeaderView.swift in Sources */,
+				CA477CB129C62ECC00A86920 /* TabbyTabs.swift in Sources */,
 				CA43589A29B24EC8004E3459 /* ViewModel.swift in Sources */,
 				CA43588C29B24EA4004E3459 /* SpecialsCaruselView.swift in Sources */,
 				CA4358A029B2519E004E3459 /* Fire ViewModel.swift in Sources */,

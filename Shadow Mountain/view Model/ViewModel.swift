@@ -75,7 +75,7 @@ class ViewModel: NSObject, ObservableObject {
             muffinTopsArray = muffinTopsObjects.map(ProductModel.init)
             cookiesArray = cookiesObjects.map(ProductModel.init)
            
-            printArrays(int: 0)
+//            printArrays(int: 0)
         }
         catch let error { print("🤑 \(error)") }
     }
@@ -106,7 +106,7 @@ extension ViewModel: NSFetchedResultsControllerDelegate {
                 breakfastSandwichesArray = results.map(ProductModel.init)
             }
         }
-        printArrays(int: 0)
+//        printArrays(int: 0)
     }
 }
 
@@ -116,49 +116,49 @@ extension ViewModel {
         fireModel.loadMenu()
     }
     
-    func printArrays(int: Int? = nil) {
-//        cookiesArray.forEach { i in
+//    func printArrays(int: Int? = nil) {
+////        cookiesArray.forEach { i in
+////            print("😠 \(i.title)")
+////            print("😠 \(i.category)")
+////            print("😠 \(i.price)")
+////        }
+////        muffinTopsArray.forEach { i in
+////            print("😠 \(i.title)")
+////            print(i.category)
+////            print(i.price)
+////            print(i.size)
+////        }
+////        hotDrinksArray.forEach { i in
+////            print("😠 \(i.title)")
+////            print(i.category)
+////            print(i.price)
+////            print(i.size)
+////        }
+////        coldDrinksArray.forEach { i in
+////            print("😠 \(i.title)")
+////            print(i.category)
+////            print(i.price)
+////            print(i.size)
+////        }
+////        breakfastSandwichesArray.forEach { i in
+////            print("😠 \(i.title)")
+////            print(i.type ?? "no type on loop")
+////            print(i.category)
+////            print(i.price)
+////            print(i.size)
+////        }
+////        categoriesArray
+////            .forEach { i in
+////                print("😠 \(i.title)")
+////            }
+//        specialsArray.forEach { i in
 //            print("😠 \(i.title)")
-//            print("😠 \(i.category)")
-//            print("😠 \(i.price)")
 //        }
-//        muffinTopsArray.forEach { i in
-//            print("😠 \(i.title)")
-//            print(i.category)
-//            print(i.price)
-//            print(i.size)
-//        }
-//        hotDrinksArray.forEach { i in
-//            print("😠 \(i.title)")
-//            print(i.category)
-//            print(i.price)
-//            print(i.size)
-//        }
-//        coldDrinksArray.forEach { i in
-//            print("😠 \(i.title)")
-//            print(i.category)
-//            print(i.price)
-//            print(i.size)
-//        }
-//        breakfastSandwichesArray.forEach { i in
-//            print("😠 \(i.title)")
-//            print(i.type ?? "no type on loop")
-//            print(i.category)
-//            print(i.price)
-//            print(i.size)
-//        }
-//        categoriesArray
-//            .forEach { i in
-//                print("😠 \(i.title)")
-//            }
-        specialsArray.forEach { i in
-            print("😠 \(i.title)")
-        }
-        print(int)
-    }
+//        print(int)
+//    }
     
-    static func printCrap(cat: CategoryModel?, prod: ProductModel?) {
-        print(cat)
-        print(prod)
-    }
+//    static func printCrap(cat: CategoryModel?, prod: ProductModel?) {
+//        print(cat)
+//        print(prod)
+//    }
 }

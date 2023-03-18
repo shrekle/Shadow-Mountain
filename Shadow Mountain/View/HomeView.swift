@@ -11,19 +11,29 @@ struct HomeView: View {
     
     @EnvironmentObject var model: ViewModel
     
+    @State var tab: Tabs = .menu
+    
     var body: some View {
         
         /// CUSTOM TAB BAR
-        
+
         NavigationStack {
+        
+        GeometryReader { geo in
             
-            VStack {
+            VStack(spacing: -50) {
+                Image("shadowMountainBG2")
+                    .resizable()
+                    .frame(width: geo.size.width, height: geo.size.height)
+                    .scaledToFill()
+                    .ignoresSafeArea()
                 
+                Rectangle()
+                    .frame(height: 72)
+               
+            }
+            
                 VStack(spacing: -15) {
-                    
-                    Button("PRESS ME") {
-                        model.getCrap()
-                    }
                     
                     HeaderView()
                     
@@ -37,21 +47,44 @@ struct HomeView: View {
                             .padding(.bottom, 40)
                     }
                 }
-                .background(
-                    Image("shadowMountainBG2")
-                        .resizable()
-                        .scaledToFill()
-                        .ignoresSafeArea()
-                )
+            VStack {
+                Spacer()
+                
+                CustomTabBar(selectedTab: $tab)
+                    .padding(.bottom, 25)
+                    
+            }
+            .ignoresSafeArea()
             }
         }
     }
 }
-
-
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
             .environmentObject(ViewModel())
     }
 }
+
+
+//                    Button("PRESS ME") {
+//                        model.getCrap()
+//                    }
+//
+
+
+//VStack(spacing: -15) {
+//
+//    HeaderView()
+//
+//    SpecialsCaruselView()
+//        .aspectRatio(CGSize(width: 160, height: 145), contentMode: .fit)
+//        .padding(.horizontal, 30)
+//
+//    ScrollView {
+//        CategoriesView()
+//            .padding(.horizontal)
+//            .padding(.bottom, 40)
+//    }
+//
+//}

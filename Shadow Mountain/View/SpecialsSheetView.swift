@@ -35,6 +35,7 @@ struct SpecialsSheetView: View {
                         Spacer()
                         ZStack {
                             
+                            //  deez two rectangles i use to darken the green color, bottom rec is set to low opacity black
                             Rectangle()
                                 .frame(maxWidth: .infinity, maxHeight: 40)
                                 .foregroundColor(.green)
@@ -58,10 +59,9 @@ struct SpecialsSheetView: View {
                 ScrollView(showsIndicators: false) {
                     LazyVStack(spacing: 10) {
                         ProductCard(product: special)
-                            .padding(.horizontal)
+                            .padding(.horizontal, 40)
                     }
                 }   //  scrollView
-                
             }   //  Vstack
            
         }

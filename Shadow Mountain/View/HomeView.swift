@@ -67,11 +67,6 @@ struct HomeView_Previews: PreviewProvider {
 }
 
 
-//                    Button("PRESS ME") {
-//                        model.getCrap()
-//                    }
-//
-
 
 //VStack(spacing: -15) {
 //

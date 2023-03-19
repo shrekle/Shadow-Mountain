@@ -40,6 +40,8 @@
 		CA4358C929B3B2D4004E3459 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4358C829B3B2D4004E3459 /* BaseModel.swift */; };
 		CA4358CB29B3B4B6004E3459 /* PoductEntity+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4358CA29B3B4B6004E3459 /* PoductEntity+Extension.swift */; };
 		CA477CB129C62ECC00A86920 /* TabbyTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA477CB029C62ECC00A86920 /* TabbyTabs.swift */; };
+		CA477CB329C62F9100A86920 /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA477CB229C62F9100A86920 /* HomeTabView.swift */; };
+		CA477CB529C6321400A86920 /* Announcements.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA477CB429C6321400A86920 /* Announcements.swift */; };
 		CA4B679A29BBE3AB002D0AEA /* SpecialsSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4B679929BBE3AB002D0AEA /* SpecialsSheetView.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +78,8 @@
 		CA4358C829B3B2D4004E3459 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		CA4358CA29B3B4B6004E3459 /* PoductEntity+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PoductEntity+Extension.swift"; sourceTree = "<group>"; };
 		CA477CB029C62ECC00A86920 /* TabbyTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbyTabs.swift; sourceTree = "<group>"; };
+		CA477CB229C62F9100A86920 /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
+		CA477CB429C6321400A86920 /* Announcements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcements.swift; sourceTree = "<group>"; };
 		CA4B679929BBE3AB002D0AEA /* SpecialsSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialsSheetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -178,12 +182,14 @@
 			isa = PBXGroup;
 			children = (
 				CA477CB029C62ECC00A86920 /* TabbyTabs.swift */,
+				CA477CB229C62F9100A86920 /* HomeTabView.swift */,
 				CA43588729B24E36004E3459 /* HomeView.swift */,
 				CA43588929B24E98004E3459 /* HeaderView.swift */,
 				CA43588B29B24EA4004E3459 /* SpecialsCaruselView.swift */,
 				CA43588E29B24EB0004E3459 /* CategoriesView.swift */,
 				CA43588F29B24EB0004E3459 /* ProductView.swift */,
 				CA4B679929BBE3AB002D0AEA /* SpecialsSheetView.swift */,
+				CA477CB429C6321400A86920 /* Announcements.swift */,
 				CA1260C029C60774001ECCF6 /* Custom Tab Bar */,
 				CA43588129B24D84004E3459 /* View Elements */,
 				CA1260C529C6164C001ECCF6 /* BackgroundWithTab.swift */,
@@ -348,7 +354,9 @@
 				CA4358A729B252EE004E3459 /* CoreData Manager.swift in Sources */,
 				CA3AFA2429B93A6500595CF3 /* ProductEntity+CoreDataClass.swift in Sources */,
 				CA3AFA2229B93A6500595CF3 /* CategoryEntity+CoreDataClass.swift in Sources */,
+				CA477CB329C62F9100A86920 /* HomeTabView.swift in Sources */,
 				CA4B679A29BBE3AB002D0AEA /* SpecialsSheetView.swift in Sources */,
+				CA477CB529C6321400A86920 /* Announcements.swift in Sources */,
 				CA1DF14629B7AD2B00D3ABC0 /* CategoryEntity+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,8 +492,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -513,8 +520,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

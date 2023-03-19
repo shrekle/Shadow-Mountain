@@ -36,46 +36,64 @@ struct ProductView: View {
     }
     
     var body: some View {
-        
-        ZStack {
-            
-            
-            VStack(spacing: -80) {
-                
-                ZStack {
-                    Image(uiImage: category.image)
+        GeometryReader { geo in
+                VStack {
+                    ZStack {
+                        
+                        Image(uiImage: category.image)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: geo.size.width)
+                            .clipped()
+                            
+                            .ignoresSafeArea()
+                        
+                        VStack {
+                            
+                            Spacer()
+                            
+                            ZStack {
+                                
+                                Rectangle()
+                                    .frame(maxWidth: .infinity, maxHeight: 40)
+                                    .foregroundColor(.black)
+                                
+                                Text(category.title)
+                                    .font(.largeTitle)
+                                    .foregroundColor(.white)
+                            }
+                        }
+                    }
+                    .frame(height: 300)
+                    
+                    ScrollView(showsIndicators: false) {
+                        LazyVStack(spacing: 10) {
+                            
+                            ForEach(products) { product in
+                                ProductCard(product: product)
+                                    .padding(.horizontal)
+                            }
+                        }
+                    }
+                }
+                .background(
+                    Image("shadowMountainBG2")
                         .resizable()
+                        .frame(width: geo.size.width, height: geo.size.height)
                         .scaledToFill()
-                        .clipped()
-                    
-                    VStack {
-                        
-                        Spacer()
-                        
-                        ZStack {
-                            
-                            Rectangle()
-                                .frame(maxWidth: .infinity, maxHeight: 40)
-                                .foregroundColor(.black)
-                            
-                            Text(category.title)
-                                .font(.largeTitle)
-                                .foregroundColor(.white)
-                        }
-                    }
-                }
-                .frame(height: 300)
-                .ignoresSafeArea()
-                ScrollView(showsIndicators: false) {
-                    LazyVStack(spacing: 10) {
-                    
-                        ForEach(products) { product in
-                            ProductCard(product: product)
-                                .padding(.horizontal)
-                        }
-                    }
-                }
-            }
+                )
+        }
+        .ignoresSafeArea()
+    }
+}
+//struct ProductView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ProductView(category: Constants.teasAndLemonades)
+//            .environmentObject(ViewModel())
+//    }
+//}
+
+
 //            .toolbar {
 //                ToolbarItem(placement: .navigationBarTrailing) {
 //                    Image("logoBlack")
@@ -86,19 +104,4 @@ struct ProductView: View {
 //                        .padding(.top)
 //                }
 //            }
-        }
-        .background(
-            Image("shadowMountainBG2")
-                .resizable()
-                .scaledToFit()
-                .ignoresSafeArea()
-                .padding(.trailing, 58)
-        )
-    }
-}
-//struct ProductView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ProductView(category: Constants.teasAndLemonades)
-//            .environmentObject(ViewModel())
-//    }
 //}

@@ -8,8 +8,48 @@
 import SwiftUI
 
 struct TabbyTabs: View {
+    
+    @State var tab: Tabs = .menu
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        // GeometryReader { geo in
+        
+        NavigationStack {
+            
+            
+            ZStack {
+                VStack(spacing: 0)  {
+                    GeometryReader { geo in
+                        VStack {
+                            Image("shadowMountainBG2")
+                                .resizable()
+                                .frame(width: geo.size.width, height: geo.size.height)
+                                .scaledToFill()
+                        }
+                    }
+                    .ignoresSafeArea()
+                    Rectangle()
+                        .frame(height: 72)
+                }
+                
+                //MARK: - BODY
+                switch tab {
+                case .menu:
+                    HomeTabView()
+                case .announcements:
+                    Announcements()
+                }
+                
+                //MARK: - TABBAR
+                VStack {
+                    
+                    Spacer()
+                    
+                    CustomTabBar(selectedTab: $tab)
+                }
+            }
+        }
     }
 }
 

@@ -23,7 +23,7 @@ struct CustomTabBar: View {
                 selectedTab = .menu
             } label: {
                 
-                TabBarButton(buttonText: "Menu", image: "bubble.left", isActive: selectedTab == .menu)
+                TabBarButton(buttonText: "Menu", image: "cup.and.saucer.fill", isActive: selectedTab == .menu)
                 
             }// Label
             .tint(.white)
@@ -32,7 +32,7 @@ struct CustomTabBar: View {
                 selectedTab = .announcements
             } label: {
                 
-                TabBarButton(buttonText: "Annoucements", image: "person", isActive: selectedTab == .announcements)
+                TabBarButton(buttonText: "Annoucements", image: "megaphone.fill", isActive: selectedTab == .announcements)
                 
             }// Label
             .tint(.white)

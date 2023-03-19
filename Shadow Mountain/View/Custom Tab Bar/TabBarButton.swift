@@ -20,7 +20,7 @@ struct TabBarButton: View {
                 Rectangle()
                     .foregroundColor(.white)
                     .frame(width: geo.size.width, height: 5)
-//                    .padding(.leading, geo.size.width/4)
+                    .padding(.leading)
                    
             }
             

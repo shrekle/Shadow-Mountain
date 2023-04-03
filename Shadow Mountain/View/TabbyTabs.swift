@@ -16,8 +16,8 @@ struct TabbyTabs: View {
         // GeometryReader { geo in
         
         NavigationStack {
-            
-            
+            ///make this carusel infinite, so it loops around when it gets to the end and restarts, kavasoft tutorial
+            ///SwiftUI Infinite Carousel - Infinite Page Tab View - SwiftUI Tutorials - Xcode 14
             ZStack {
                 VStack(spacing: 0)  {
                     GeometryReader { geo in

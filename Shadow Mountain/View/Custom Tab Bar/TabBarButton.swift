@@ -19,8 +19,10 @@ struct TabBarButton: View {
             if isActive {
                 Rectangle()
                     .foregroundColor(.white)
-                    .frame(width: geo.size.width, height: 5)
-                    .padding(.leading)
+                    .frame(maxWidth: .infinity, maxHeight: 5)
+                    .padding(.horizontal, 30)
+//                    .frame(width: geo.size.width, height: 5)
+//                    .padding(.leading)
                    
             }
             

@@ -10,7 +10,8 @@ import SwiftUI
 struct HomeTabView: View {
     
     @EnvironmentObject var model: ViewModel
-    
+    ///make this carusel infinite, so it loops around when it gets to the end and restarts, kavasoft tutorial
+    ///SwiftUI Infinite Carousel - Infinite Page Tab View - SwiftUI Tutorials - Xcode 14
     @State var tab: Tabs = .menu
     
     var body: some View {

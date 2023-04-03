@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct SpecialsCaruselView: View {
-    
+    ///make this carusel infinite, so it loops around when it gets to the end and restarts, kavasoft tutorial
+    ///SwiftUI Infinite Carousel - Infinite Page Tab View - SwiftUI Tutorials - Xcode 14
     @EnvironmentObject var model: ViewModel
     @State var tabIndex = 0
     @State var crap = 0
